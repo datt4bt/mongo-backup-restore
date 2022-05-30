@@ -1,0 +1,48 @@
+{
+  "name": "dat4bt0-mongo",
+  "version": "1.0.3",
+  "description": "Dump mongo collections, zip, upload to S3.Restore database",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "start": "nodemon --watch \"src/**\" --ext \"ts,json\" --ignore \"src/**/*.spec.ts\" --exec \"ts-node src/index.ts\" ",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mongodb",
+    "mongo",
+    "dump",
+    "s3",
+    "backup",
+    "zip"
+  ],
+  "author": "Dat4bt0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/datt4bt/mongo-backup-restore"
+  },
+  "bugs": {
+    "url": "https://github.com/datt4bt/mongo-backup-restore/issues"
+  },
+  "homepage": "https://github.com/datt4bt/mongo-backup-restore#readme",
+  "devDependencies": {
+    "@types/archiver": "^5.3.1",
+    "@types/unzipper": "^0.10.5",
+    "nodemon": "^2.0.16",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "archiver": "^5.3.1",
+    "aws-sdk": "^2.1145.0",
+    "mongo-uri": "^0.1.2",
+    "mongodb": "^4.6.0",
+    "unzipper": "^0.10.11"
+  }
+}
